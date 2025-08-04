@@ -10,11 +10,11 @@ const Navbar = ({showlogin}) => {
     return (
         <div className='navbar'>
             <div className="image">
-                <Link to='/'><img src={assets.logo} alt="image" /></Link>
+                <Link to='/FoodOrederingWebsite'><img src={assets.logo} alt="image" /></Link>
             </div>
             <ul className='navbar-ul'>
                 <li className={active === "home" ? "active" : ""} onClick={() => { setActive("home") }}>
-                    <Link to={'/'} >Home</Link>
+                    <Link to={'/FoodOrederingWebsite'} >Home</Link>
                 </li>
                 <li className={active === "menu" ? "active" : ""} onClick={() => { setActive("menu") }}>
                     <a href='#exploremenu'>Menu</a>
