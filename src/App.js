@@ -18,7 +18,7 @@ function App() {
       <div className="App">
         <Navbar showlogin={setShowlogin}/>
         <Routes>
-          <Route path='/FoodOrederingWebsite' element={<Home />}/>
+          <Route path='/' element={<Home />}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/order' element={<Placeorder/>}/>
         </Routes>
