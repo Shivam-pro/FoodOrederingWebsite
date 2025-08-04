@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FoodOrederingWebsite/static/css/main.1fdf62b5.css",
-    "main.js": "/FoodOrederingWebsite/static/js/main.a4274a36.js",
+    "main.js": "/FoodOrederingWebsite/static/js/main.a7d4ea84.js",
     "static/js/453.b22f0c0b.chunk.js": "/FoodOrederingWebsite/static/js/453.b22f0c0b.chunk.js",
     "static/media/Black-Forest-Cake.jpg": "/FoodOrederingWebsite/static/media/Black-Forest-Cake.e0556ee9ed6a1aceb0fc.jpg",
     "static/media/Chocolate-Cake.jpeg": "/FoodOrederingWebsite/static/media/Chocolate-Cake.62ee4280519f7dbf24dd.jpeg",
@@ -56,11 +56,11 @@
     "static/media/googleplay-image.png": "/FoodOrederingWebsite/static/media/googleplay-image.bfd19aa04130f150bc86.png",
     "index.html": "/FoodOrederingWebsite/index.html",
     "main.1fdf62b5.css.map": "/FoodOrederingWebsite/static/css/main.1fdf62b5.css.map",
-    "main.a4274a36.js.map": "/FoodOrederingWebsite/static/js/main.a4274a36.js.map",
+    "main.a7d4ea84.js.map": "/FoodOrederingWebsite/static/js/main.a7d4ea84.js.map",
     "453.b22f0c0b.chunk.js.map": "/FoodOrederingWebsite/static/js/453.b22f0c0b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1fdf62b5.css",
-    "static/js/main.a4274a36.js"
+    "static/js/main.a7d4ea84.js"
   ]
 }
