@@ -50,3 +50,9 @@
 .checkbox{
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+    .login-container{
+        width: 90%;
+    }
+}
