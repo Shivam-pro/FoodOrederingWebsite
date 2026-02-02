@@ -6,10 +6,11 @@ const Footer = () => {
         <div className='footer' id='footer'>
             <div className="footer-content">
                 <div className="socialmedia">
-                    <div className="image">
+                    <div className="image flex">
                         <img src={assets.logo} alt="" />
+                        <span><h1>Zayto</h1></span>
                     </div>
-                    <p className='socialmedia-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatum culpa odit numquam suscipit, explicabo provident veritatis deleniti, porro ex quisquam maiores consequatur nam iure magni tempora pariatur sapiente adipisci mollitia incidunt! Alias, deleniti!</p>
+                    <p className='socialmedia-content'>Zayto brings fresh flavors and fast delivery, ensuring every meal is a moment of joy. Taste convenience, quality, and happiness delivered straight to your doorstep.</p>
                     <div className="social-media-icons">
                         <div className="facebook">
                             <i className="fa-brands fa-facebook-f"></i>
@@ -35,13 +36,13 @@ const Footer = () => {
                     <h2 className='heading'>GET IN TOUCH</h2>
                     <ul className='ul'>
                         <li>+1-212-465-7980</li>
-                        <li>fooddelivery@gmail.com</li>
+                        <li>shivamprakash303@gmail.com</li>
                     </ul>
                 </div>
             </div>
             <hr />
             <br />
-            <p className='copyright'>Copyright 2024 &copy; Fooddelivery.com ~ All Right Reserved</p>
+            <p className='copyright'>Copyright 2024 &copy; Zayto.com ~ All Right Reserved</p>
         </div>
     )
 }
