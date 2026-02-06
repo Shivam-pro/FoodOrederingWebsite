@@ -6,7 +6,7 @@ import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // Placing user order for frontend
 const placeOrder = async (req, res) => {
-    const frontend_url = "http://localhost:3001/FoodOrederingWebsite";
+    const frontend_url = process.env.FRONTEND_URL;
     console.log("Decoded userId:", req.body.userId);
     try {
         const newOrder = new orderModel({
