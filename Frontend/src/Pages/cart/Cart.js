@@ -1,10 +1,9 @@
 import React, { useContext } from 'react'
 import './Cart.css'
 import { Storecontext } from '../../context/Storecontext'
-import { food_list } from '../../Assets/assets';
 import { useNavigate } from 'react-router-dom';
 const Cart = () => {
-  const { cartItems, removeFromCart, getTotalCartAmount, url } = useContext(Storecontext);
+  const { cartItems, removeFromCart, getTotalCartAmount, url, food_list } = useContext(Storecontext);
   const navigate = useNavigate();
   return (
     <>
@@ -20,9 +19,9 @@ const Cart = () => {
         {food_list.map((items, index) => {
           if (cartItems[items._id] > 0) {
             return (
-              <div className='cart-column'>
+              <div className='cart-column' key={index}>
                 <div className='cart-product-image'>
-                  <img src={url+"/images/"+items.image} alt="" />
+                  <img src={url + "/images/" + items.image} alt="" />
                 </div>
                 <div className="title">{items.name}</div>
                 <div className="product-price">₹{items.price}</div>
@@ -52,7 +51,7 @@ const Cart = () => {
             <p className='total-bold'><b>Total</b></p>
             <p>₹{getTotalCartAmount()}</p>
           </div>
-          <button className='cart-total-btn' type='button' onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
+          <button className='cart-total-btn' type='button' onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>
         </div>
         <div className="promo-code-div">
           <p>If you have a promo code, Enter it here</p>

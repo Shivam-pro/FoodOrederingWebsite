@@ -5,7 +5,7 @@ export const Storecontext = createContext(null);
 
 const StoreContextProvier = (props) => {
     const [cartItems, setCartItems] = useState({});
-    const url = process.env.REACT_APP_BACKEND_URL;
+    const url = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000";
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([])
 
@@ -48,9 +48,7 @@ const StoreContextProvier = (props) => {
         const response = await axios.post(url + '/api/cart/get', {}, { headers: { token } });
         setCartItems(response.data.cartData);
     }
-    useEffect(() => {
-    }, [cartItems])
-
+    
     useEffect(() => {
         async function loadData() {
             await fetchFoodList()
