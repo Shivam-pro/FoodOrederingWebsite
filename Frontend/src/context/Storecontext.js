@@ -6,8 +6,9 @@ export const Storecontext = createContext(null);
 const StoreContextProvier = (props) => {
     const [cartItems, setCartItems] = useState({});
     const url = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000";
-    const [token, setToken] = useState("")
-    const [food_list, setFoodList] = useState([])
+    const [token, setToken] = useState("");
+    const [food_list, setFoodList] = useState([]);
+    const [loader, setLoader] = useState(false);
 
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
@@ -41,7 +42,15 @@ const StoreContextProvier = (props) => {
 
     const fetchFoodList = async () => {
         const response = await axios.get(url + '/api/food/list');
-        setFoodList(response.data.data);
+        if(response.data.success){
+            setFoodList(response.data.data);
+            setLoader(false);
+            console.log(response);
+        }
+        else{
+            setLoader(true);
+            console.log("loader", loader);
+        }
     }
 
     const loadCartData = async (token) => {
@@ -58,6 +67,10 @@ const StoreContextProvier = (props) => {
             }
         }
         loadData()
+        if(loadData){
+            setLoader(false)
+        }
+        setLoader(true)
     }, [])
 
     const contextValue = {
@@ -70,6 +83,8 @@ const StoreContextProvier = (props) => {
         url,
         token,
         setToken,
+        loader,
+        setLoader,
     }
 
     return (
